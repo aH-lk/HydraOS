@@ -1,0 +1,262 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+                              /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj (__udivdi3)
+/usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+                              /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj (__umoddi3)
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/asm/entry.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/asm/x86.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+LOAD /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+LOAD /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a
+                0x00000500                        phys = 0x500
+                0x00000500                        . = phys
+
+.entry          0x00000500       0xc0
+                0x00000500                        __entry_start = .
+ *(.entry)
+ .entry         0x00000500       0xc0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/asm/entry.obj
+                0x00000500                entry
+
+.text           0x000005c0     0x1b46
+                0x000005c0                        __text_start = .
+ *(.text)
+ .text          0x000005c0      0x1a5 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/asm/x86.obj
+                0x000005c0                x86_outb
+                0x000005cb                x86_inb
+                0x000005d4                x86_Disk_GetDriveParams
+                0x00000697                x86_Disk_Reset
+                0x000006e7                x86_Disk_Read
+ .text          0x00000765      0x199 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+                0x00000765                DISK_Initialize
+                0x000007d5                DISK_LBA2CHS
+                0x00000862                DISK_ReadSectors
+ .text          0x000008fe       0xf2 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+                0x000008fe                start
+ .text          0x000009f0       0xf5 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+                0x000009f0                memcpy
+                0x00000a42                memset
+                0x00000a85                memcmp
+ .text          0x00000ae5      0x883 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+                0x00000ae5                putchr
+                0x00000b14                putcolor
+                0x00000b46                getchr
+                0x00000b68                getcolor
+                0x00000b8d                setcursor
+                0x00000bfe                clrscr
+                0x00000c8c                scrollback
+                0x00000d7a                putc
+                0x00000e8a                puts
+                0x00000eb9                printf_unsigned
+                0x00000f5d                printf_signed
+                0x00000fba                printf
+                0x000012cf                print_buffer
+ .text          0x00001368       0xb6 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+                0x00001368                strchr
+                0x000013a6                strcpy
+                0x000013f8                strlen
+ .text          0x0000141e      0xa30 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+                0x0000141e                FAT_ReadBootSector
+                0x0000143b                FAT_ReadFat
+                0x0000146f                FAT_Initialize
+                0x000016a3                FAT_ClusterToLba
+                0x000016c4                FAT_OpenEntry
+                0x0000188c                FAT_NextCluster
+                0x000018d9                FAT_Read
+                0x00001b2d                FAT_ReadEntry
+                0x00001b4e                FAT_Close
+                0x00001b9c                FAT_FindFile
+                0x00001d01                FAT_Open
+ .text          0x00001e4e       0x55 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+                0x00001e4e                islower
+                0x00001e77                toupper
+ *fill*         0x00001ea3        0xd 
+ .text          0x00001eb0      0x11a /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+                0x00001eb0                __udivdi3
+ *fill*         0x00001fca        0x6 
+ .text          0x00001fd0      0x136 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+                0x00001fd0                __umoddi3
+
+.data           0x00002108        0xc
+                0x00002108                        __data_start = .
+ *(.data)
+ .data          0x00002108        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .data          0x00002108        0x8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+                0x00002108                KernelLoadBuffer
+                0x0000210c                Kernel
+ .data          0x00002110        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .data          0x00002110        0x4 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+                0x00002110                g_ScreenBuffer
+ .data          0x00002114        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .data          0x00002114        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .data          0x00002114        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .data          0x00002114        0x0 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .data          0x00002114        0x0 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.rodata         0x00002114      0x207
+                0x00002114                        __rodata_start = .
+ *(.rodata)
+ .rodata        0x00002114       0x2f /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ *fill*         0x00002143        0x1 
+ .rodata        0x00002144       0xba /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+                0x00002144                SCREEN_WIDTH
+                0x00002148                SCREEN_HEIGHT
+                0x0000214c                DEFAULT_COLOR
+                0x00002150                g_HexChars
+ *fill*         0x000021fe        0x2 
+ .rodata        0x00002200      0x11b /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+
+.eh_frame       0x0000231c       0xd8
+ .eh_frame      0x0000231c       0x64 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .eh_frame      0x00002380       0x74 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.bss            0x000023f4       0x14
+                0x000023f4                        __bss_start = .
+ *(.bss)
+ .bss           0x000023f4        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .bss           0x000023f4        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .bss           0x000023f4        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .bss           0x000023f4        0x8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+                0x000023f4                g_ScreenX
+                0x000023f8                g_ScreenY
+ .bss           0x000023fc        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .bss           0x000023fc        0xc /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .bss           0x00002408        0x0 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .bss           0x00002408        0x0 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .bss           0x00002408        0x0 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+                0x00002408                        __end = .
+OUTPUT(/Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2.bin binary)
+
+.debug_info     0x00000000     0x1eb9
+ .debug_info    0x00000000      0x2b1 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_info    0x000002b1      0x2bf /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_info    0x00000570      0x1e8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_info    0x00000758      0x54c /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_info    0x00000ca4      0x132 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_info    0x00000dd6      0x9a9 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_info    0x0000177f       0xcb /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_info    0x0000184a      0x32c /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_info    0x00001b76      0x343 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_abbrev   0x00000000      0xb9c
+ .debug_abbrev  0x00000000      0x140 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_abbrev  0x00000140      0x14c /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_abbrev  0x0000028c       0xe2 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_abbrev  0x0000036e      0x1f6 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_abbrev  0x00000564       0xa8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_abbrev  0x0000060c      0x24d /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_abbrev  0x00000859       0x77 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_abbrev  0x000008d0      0x15b /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x00000a2b      0x171 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_aranges  0x00000000      0x120
+ .debug_aranges
+                0x00000000       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_aranges
+                0x00000020       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_aranges
+                0x00000040       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_aranges
+                0x00000060       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_aranges
+                0x00000080       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_aranges
+                0x000000a0       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_aranges
+                0x000000c0       0x20 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_aranges
+                0x000000e0       0x20 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_aranges
+                0x00000100       0x20 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_line     0x00000000      0xf6b
+ .debug_line    0x00000000       0xea /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_line    0x000000ea       0xbb /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_line    0x000001a5       0xcc /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_line    0x00000271      0x392 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_line    0x00000603       0x97 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_line    0x0000069a      0x4ff /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_line    0x00000b99       0x81 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_line    0x00000c1a      0x180 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_line    0x00000d9a      0x1d1 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_str      0x00000000     0x12a3
+ .debug_str     0x00000000      0x1c5 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_str     0x000001c5      0x1e2 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_str     0x000003a7      0x125 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_str     0x000004cc      0x24e /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_str     0x0000071a       0xf1 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_str     0x0000080b      0x5e8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_str     0x00000df3       0xea /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_str     0x00000edd      0x1e3 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_str     0x000010c0      0x1e3 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_line_str
+                0x00000000      0x80c
+ .debug_line_str
+                0x00000000       0xef /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_line_str
+                0x000000ef      0x100 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_line_str
+                0x000001ef       0xe8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_line_str
+                0x000002d7       0xf4 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_line_str
+                0x000003cb       0x95 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_line_str
+                0x00000460      0x10e /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_line_str
+                0x0000056e       0x92 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .debug_line_str
+                0x00000600      0x106 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_line_str
+                0x00000706      0x106 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.comment        0x00000000       0xab
+ .comment       0x00000000       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .comment       0x00000013       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .comment       0x00000026       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .comment       0x00000039       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .comment       0x0000004c       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .comment       0x0000005f       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .comment       0x00000072       0x13 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+ .comment       0x00000085       0x13 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .comment       0x00000098       0x13 /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_frame    0x00000000      0x524
+ .debug_frame   0x00000000       0x80 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/disk.obj
+ .debug_frame   0x00000080       0x2c /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/main.obj
+ .debug_frame   0x000000ac       0x74 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/memory.obj
+ .debug_frame   0x00000120      0x1b8 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/stdio.obj
+ .debug_frame   0x000002d8       0x74 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/string.obj
+ .debug_frame   0x0000034c      0x184 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/fat.obj
+ .debug_frame   0x000004d0       0x54 /Users/goks/Desktop/MyCode/ASM/HydraOS/build/stage2/c/ctype.obj
+
+.debug_loclists
+                0x00000000      0x978
+ .debug_loclists
+                0x00000000      0x50c /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_loclists
+                0x0000050c      0x46c /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
+
+.debug_rnglists
+                0x00000000       0x49
+ .debug_rnglists
+                0x00000000       0x2a /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_udivdi3.o)
+ .debug_rnglists
+                0x0000002a       0x1f /usr/local/Cellar/i686-elf-gcc/13.2.0/lib/gcc/i686-elf/13.2.0/libgcc.a(_umoddi3.o)
