@@ -20,9 +20,7 @@ void __attribute__((section(".entry"))) start(uint16_t bootDrive)
 
     HAL_Initialize();
 
-    clrscr();
-
-    printf("Hello from kernel!\n");
+    printf("'Hello, World' from KERNEL!!\nWaiting for keyboard interrupt");
 
     i686_IRQ_RegisterHandler(0, timer);
 
