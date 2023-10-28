@@ -4,7 +4,6 @@
 #include <stdbool.h>
 
 typedef struct {
-    const char* Name;
     const char* Model;
     const char* FLoc;
     bool (*Probe)();

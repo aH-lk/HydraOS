@@ -152,7 +152,6 @@ bool i8259_Probe()
 
 static const PICDriver g_PicDriver = {
     .FLoc = "/kernel/arch/i686/i8259.c",
-    .Name = "i8259",
     .Model = "8259",
     .Probe = &i8259_Probe,
     .Initialize = &i8259_Configure,
