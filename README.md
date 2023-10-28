@@ -90,19 +90,19 @@ The bootloader, written in Assembly, is responsible for loading the operating sy
 - **kernel.c**: Contains low-level functionality such as memory management, hardware interactions, and system calls.
 - **kernel.hpp**: Includes class definitions and higher-level system components like process management, file system, and device drivers.
 
-## Build Process with SCons
+## Build Process with Make
 
-The build process is managed by SCons, ensuring efficient compilation and linking of source files. The `SConstruct` file in the `build` directory contains build configurations and dependencies.
+The build process is managed by Make, ensuring efficient compilation and linking of source files. The `Makefilet` file in the `src` directory contains build configurations and dependencies.
 
 ### Building the Project
 
 To build the project, execute the following command in the terminal:
 
 ```bash
-scons
+make
 ```
 
-This command will compile the bootloader, kernel, and other necessary components, generating binary files in the `bin` directory.
+This command will compile the bootloader, kernel, and other necessary components, generating binary files in the `build` directory.
 
 ## Running the Operating System
 
@@ -110,4 +110,4 @@ To run the operating system in an emulator or on real hardware, follow the instr
 
 ## Conclusion
 
-This project demonstrates the development of a basic operating system using a combination of C, C++, Assembly, and SCons. By exploring this project, developers can gain insights into low-level system programming, language integration, and build automation, paving the way for more complex operating system projects and system-level optimizations.
+This project demonstrates the development of a basic operating system using a combination of C, C++, Assembly, and Make. By exploring this project, developers can gain insights into low-level system programming, language integration, and build automation, paving the way for more complex operating system projects and system-level optimizations.
