@@ -106,7 +106,7 @@ This command will compile the bootloader, kernel, and other necessary components
 
 ## Running the Operating System
 
-To run the operating system in an emulator or on real hardware, follow the instructions provided in the `docs/usage.md` file.
+To run the operating system in an emulator, follow the instructions provided in the `docs/usage.md` file.
 
 ## Conclusion
 
